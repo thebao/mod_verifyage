@@ -74,7 +74,20 @@
 					description="MOD_VERIFYAGE_FIELD_CATEGORY_DESC"
 					>
 					  <option value="">JOPTION_ALL_CATEGORIES</option>
-				</field>	
+				</field>
+				<field 
+					name="dateformat" 
+					type="list"
+					default="1"
+					multiple="false" 
+					label="MOD_VERIFYAGE_FIELD_DATEFORMAT_LABEL" 
+					description="MOD_VERIFYAGE_FIELD_DATEFORMAT_DESC"
+					>
+					  <option value="1">MOD_VERIFYAGE_FIELD_DATEFORMAT_A</option>
+					  <option value="2">MOD_VERIFYAGE_FIELD_DATEFORMAT_B</option>
+					  <option value="3">MOD_VERIFYAGE_FIELD_DATEFORMAT_C</option>
+					  <option value="4">MOD_VERIFYAGE_FIELD_DATEFORMAT_D</option>
+				</field>
 				<field 
 					name="count" 
 					type="text" 

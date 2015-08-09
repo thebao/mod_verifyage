@@ -50,8 +50,17 @@ $document = JFactory::getDocument();
 			echo $myVars->get('warn_content');
 		?>
         </p>
-        <form class="form-inline">
-        	<select name="day">
+        <form class="form-inline" style="display:flex;">
+        	<select name="day"
+        		<?php
+        			$fmt = $myVars->get('dateformat');
+        			if($fmt==1)
+        				echo 'style="order:1;">';
+        			if($fmt==2)
+        				echo 'style="order:3;">';
+        			if($fmt==3 || $fmt==4)
+        				echo 'style="order:2;">';
+        		?>
               <option value="" disabled selected><?php echo 
 	JText::_( "MOD_VERIFYAGE_GUI_DAY" );?></option>
               <?php
@@ -60,7 +69,16 @@ $document = JFactory::getDocument();
                 }
               ?>
           </select>
-          <select name="month">
+          <select name="month"
+          		<?php
+        			$fmt = $myVars->get('dateformat');
+        			if($fmt==3)
+        				echo 'style="order:3;">';
+        			if($fmt==4)
+        				echo 'style="order:1;">';
+        			if($fmt==1 || $fmt==2)
+        				echo 'style="order:2;">';
+        		?>
               <option value="" disabled selected><?php echo 
 	JText::_( "MOD_VERIFYAGE_GUI_MONTH" );?></option>
               <?php
@@ -70,8 +88,15 @@ $document = JFactory::getDocument();
               ?>
           </select>
           
-          <select name="year">
-              <option value="" disabled selected><?php echo 
+          <select name="year"
+          		<?php
+        			$fmt = $myVars->get('dateformat');
+        			if($fmt==1 || $fmt==4)
+        				echo 'style="order:3;">';
+        			if($fmt==2 || $fmt==3)
+        				echo 'style="order:1;">';
+        		?>              
+        		<option value="" disabled selected><?php echo 
 	JText::_( "MOD_VERIFYAGE_GUI_YEAR" );?></option>
               <?php
 				for($i=date("Y");$i>=1925;$i--){
